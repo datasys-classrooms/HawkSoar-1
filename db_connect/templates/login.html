@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-danger" role="alert">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-    <form method="post">{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <style>
         body {
-            background: url('{% static 'db_connect/images/Slide1.PNG' %}');
+            background: url('{% static 'db_connect/images/newhawksoar.png' %}');
             background-size: cover;
             font-family: Arial, sans-serif;
             display: flex;
@@ -27,15 +13,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding-left: 0%; /* Add padding-left to move the container */
+            padding-left: 3%; /* Add padding-left to move the container */
         }
 
         .login-container {
-            background-color: transparent;
-            padding: 2rem;
-            border-radius: 8px;
-           
-            width: 50%; /* Added to increase the size */
+            background-color: hwb(0 98% 0%);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid #c75454;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 30%; /* Added to increase the size */
         max-width: 800px; /* Added to set a maximum width */
         box-sizing: border-box; /* Added to include padding in the width */
         }
@@ -125,12 +112,5 @@
             <button type="submit">Log in</button>
         </form>
     </div>
-</body>
-</html>
-
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Log in</button>
-    </form>
 </body>
 </html>
